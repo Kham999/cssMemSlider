@@ -116,16 +116,20 @@ input#r4:checked ~ .footer > .text-container > .text {
 
   @media (max-width:767px) {
       .footer{
-        width:20rem;
-        flex-wrap:wrap-reverse;
-        align-items: center;
-        justify-content: center;
-        padding-top:2rem
+        flex-direction: column-reverse;
+        align-items:center;
+        column-gap: 0rem;
+        row-gap: 1rem;
       }
-.text-container{
-    padding:0;
-}
-    
+
+      .text-container{
+          width:30rem;
+      }
+    .text{
+        display: flex;
+      justify-content: start;
+      align-items: flex-start;
+    }
 .img-container{
     width:30rem;
     height:20rem;
@@ -138,6 +142,15 @@ input#r4:checked ~ .footer > .text-container > .text {
 }
 
 @media(max-width:500px){
+
+    .text-container{
+        width:25rem;
+    }
+  .text{
+      display: flex;
+    justify-content: start;
+    align-items: flex-start;
+  }
     .img-container{
         width:25rem;
         height:15rem;
