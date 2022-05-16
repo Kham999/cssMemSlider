@@ -79,6 +79,39 @@
       justify-content: space-between;
       align-items: flex-start;
   }
+
+  input#r1:checked~.footer>.label-container>label[for="r1"]>.bar,
+input#r2:checked~.footer>.label-container>label[for="r2"]>.bar,
+input#r3:checked~.footer>.label-container>label[for="r3"]>.bar,
+input#r4:checked~.footer>.label-container>label[for="r4"]>.bar {
+    background-color: #fff;
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+input#r1:checked ~ .img-container > .slider-img {
+    transform: translateX(0);
+}
+input#r2:checked ~ .img-container > .slider-img {
+    transform: translateX(-100%);
+}
+input#r3:checked ~ .img-container > .slider-img {
+    transform: translateX(-200%);
+}
+input#r4:checked ~ .img-container > .slider-img {
+    transform: translateX(-300%);
+}
+input#r1:checked ~ .footer > .text-container > .text{
+    transform: translate(0);
+}
+input#r2:checked ~ .footer > .text-container > .text {
+    transform: translateY(-100%);
+}
+input#r3:checked ~ .footer > .text-container > .text {
+    transform: translateY(-200%);
+}
+input#r4:checked ~ .footer > .text-container > .text {
+    transform: translateY(-300%);
+}
   
 
   @media (max-width:767px) {
@@ -113,37 +146,4 @@
         width:25rem;
         height:15rem;
         }
-}
-
-input#r1:checked~.footer>.label-container>label[for="r1"]>.bar,
-input#r2:checked~.footer>.label-container>label[for="r2"]>.bar,
-input#r3:checked~.footer>.label-container>label[for="r3"]>.bar,
-input#r4:checked~.footer>.label-container>label[for="r4"]>.bar {
-    background-color: #fff;
-    opacity: 0.8;
-    transform: scale(1.1);
-}
-input#r1:checked ~ .img-container > .slider-img {
-    transform: translateX(0);
-}
-input#r2:checked ~ .img-container > .slider-img {
-    transform: translateX(-100%);
-}
-input#r3:checked ~ .img-container > .slider-img {
-    transform: translateX(-200%);
-}
-input#r4:checked ~ .img-container > .slider-img {
-    transform: translateX(-300%);
-}
-input#r1:checked ~ .footer > .text-container > .text{
-    transform: translate(0);
-}
-input#r2:checked ~ .footer > .text-container > .text {
-    transform: translateY(-100%);
-}
-input#r3:checked ~ .footer > .text-container > .text {
-    transform: translateY(-200%);
-}
-input#r4:checked ~ .footer > .text-container > .text {
-    transform: translateY(-300%);
 }
