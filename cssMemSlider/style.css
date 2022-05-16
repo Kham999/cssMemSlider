@@ -26,19 +26,18 @@
   }
   .slider-img{
       width: 100%;
-      transition: all .6s ease;
-      
+      transition: all .6s ease;   
   }
-  .slider-img img {
+  .slider-img img{
       width: 40rem;
   }
-  .text-container {
+  .text-container{
     flex-direction: column;
     height: 5rem;
     overflow: hidden;
     padding-top:2vh;
   }
-  .text {
+  .text{
     color: #fff;
     display: flex;
     height: 5rem;
@@ -99,10 +98,21 @@
     height:20rem;
 }
 
-.slider-img{
-    width:100%;
-    height:100%;
+.slider-img img{
+    width:30rem;
+    height:20rem;
     }
+}
+
+@media(max-width:500px){
+    .img-container{
+        width:25rem;
+        height:15rem;
+    }
+    .slider-img img{
+        width:25rem;
+        height:15rem;
+        }
 }
 
 input#r1:checked~.footer>.label-container>label[for="r1"]>.bar,
