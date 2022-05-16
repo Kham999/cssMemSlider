@@ -1,0 +1,139 @@
+ body {
+      height: 100vh;
+      background-color: lightslategray;
+  }
+  .container{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+  .slider{
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+  }
+  .radio{
+      display: none;
+  }
+  .img-container{
+      width: 40rem;
+      height: 30rem;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+  }
+  .slider-img{
+      width: 100%;
+      transition: all .6s ease;
+      
+  }
+  .slider-img img {
+      width: 40rem;
+  }
+  .text-container {
+    flex-direction: column;
+    height: 5rem;
+    overflow: hidden;
+    padding-top:2vh;
+  }
+  .text {
+    color: #fff;
+    display: flex;
+    height: 5rem;
+    transition: all .6s ease;
+  }
+  .label-container{
+      display: flex;
+  }
+  .label-bar {
+      height: 1rem;
+      width: 4rem;
+      
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      opacity: .5;
+      justify-content: flex-end;
+  }
+  .bar {
+      width: 3rem;
+      height: 0.5rem;
+      background-color: black;
+      opacity: 1;
+      transition: all .4s ease;
+  }
+  
+  .label-bar:hover .bar {
+      opacity: 0.8;
+      transform: scale(1.1);
+  }
+  .footer {
+      display: flex;
+      column-gap: 1rem;
+      row-gap: 2rem;
+      flex-direction: row;
+      width: 40rem;
+      padding-top:2rem;
+      justify-content: space-between;
+      align-items: flex-start;
+  }
+  
+
+  @media (max-width:767px) {
+      .footer{
+        width:20rem;
+        flex-wrap:wrap-reverse;
+        align-items: center;
+        justify-content: center;
+        padding-top:2rem
+      }
+.text-container{
+    padding:0;
+}
+    
+.img-container{
+    width:30rem;
+    height:20rem;
+}
+
+.slider-img{
+    width:100%;
+    height:100%;
+    }
+}
+
+input#r1:checked~.footer>.label-container>label[for="r1"]>.bar,
+input#r2:checked~.footer>.label-container>label[for="r2"]>.bar,
+input#r3:checked~.footer>.label-container>label[for="r3"]>.bar,
+input#r4:checked~.footer>.label-container>label[for="r4"]>.bar {
+    background-color: #fff;
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+input#r1:checked ~ .img-container > .slider-img {
+    transform: translateX(0);
+}
+input#r2:checked ~ .img-container > .slider-img {
+    transform: translateX(-100%);
+}
+input#r3:checked ~ .img-container > .slider-img {
+    transform: translateX(-200%);
+}
+input#r4:checked ~ .img-container > .slider-img {
+    transform: translateX(-300%);
+}
+input#r1:checked ~ .footer > .text-container > .text{
+    transform: translate(0);
+}
+input#r2:checked ~ .footer > .text-container > .text {
+    transform: translateY(-100%);
+}
+input#r3:checked ~ .footer > .text-container > .text {
+    transform: translateY(-200%);
+}
+input#r4:checked ~ .footer > .text-container > .text {
+    transform: translateY(-300%);
+}
